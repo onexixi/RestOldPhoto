@@ -1,0 +1,11 @@
+version: '3'
+services:
+  realesrgan-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Имя вашего Dockerfile
+    volumes:
+      - ./results:/workspace/Real-ESRGAN/results  # Проброс папки results внутрь контейнера
+      - ./inputs:/workspace/Real-ESRGAN/inputs  # Проброс папки results внутрь контейнера
+    mem_limit: 12g
+
