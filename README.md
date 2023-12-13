@@ -15,13 +15,13 @@
 1. Клонируйте репозиторий:
 
     ```bash
-    git clone https://github.com/Amazomic/gfpgan_docker.git
+    git clone https://github.com/Amazomic/RestOldPhotor.git
     ```
 
 2. Перейдите в директорию проекта:
 
     ```bash
-    cd gfpgan_docker
+    cd RestOldPhoto
     ```
 
 3. Cобрать контейнер:
