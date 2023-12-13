@@ -15,7 +15,7 @@
 1. Клонируйте репозиторий:
 
     ```bash
-    git clone https://github.com/Amazomic/RestOldPhotor.git
+    git clone https://github.com/Amazomic/RestOldPhoto.git
     ```
 
 2. Перейдите в директорию проекта:
