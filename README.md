@@ -1,40 +1,85 @@
-# Проект RestOldPhoto
+> 注：当前项目为 Serverless Devs 应用，由于应用中会存在需要初始化才可运行的变量（例如应用部署地区、函数名等等），所以**不推荐**直接 Clone 本仓库到本地进行部署或直接复制 s.yaml 使用，**强烈推荐**通过 `s init ${模版名称}` 的方法或应用中心进行初始化，详情可参考[部署 & 体验](#部署--体验) 。
 
-Проект RestOldPhoto - это приложения для восстановления фото использующее две нейросети GFPGAN и [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN.git) которые увеличивают разрешения фотографий низкого качества а так же восстанавлиют лица на фото
+# start-fc3-custom-container-python 帮助文档
 
-Суть проекта что бы сделать удобный докер контейнер для улучшения качества старых фото в один клик
+<p align="center" class="flex justify-center">
+    <a href="https://www.serverless-devs.com" class="ml-1">
+    <img src="http://editor.devsapp.cn/icon?package=start-fc3-custom-container-python&type=packageType">
+  </a>
+  <a href="http://www.devsapp.cn/details.html?name=start-fc3-custom-container-python" class="ml-1">
+    <img src="http://editor.devsapp.cn/icon?package=start-fc3-custom-container-python&type=packageVersion">
+  </a>
+  <a href="http://www.devsapp.cn/details.html?name=start-fc3-custom-container-python" class="ml-1">
+    <img src="http://editor.devsapp.cn/icon?package=start-fc3-custom-container-python&type=packageDownload">
+  </a>
+</p>
 
-Первая установка всех зависимостей может быть долгой (скачивает около 8gb)
+<description>
 
-Для работы с контейнером вам необходимо установить [Docker](https://www.docker.com/) и запустить его
+快速部署一个 Custom Container Python 的 Hello World 函数到阿里云函数计算。
 
-Файлы которые вы хотите улучшить необходимо положить в папку (inputs) после запуска контейнера в папке (results) должны появится обработанные файлы
+</description>
 
-## Установка и использование
+<codeUrl>
 
-1. Клонируйте репозиторий:
+- [:smiley_cat: 代码](https://github.com/devsapp/start-fc/tree/main/custom-container/python/src)
 
-    ```bash
-    git clone https://github.com/Amazomic/RestOldPhoto.git
-    ```
+</codeUrl>
+<preview>
 
-2. Перейдите в директорию проекта:
+</preview>
 
-    ```bash
-    cd RestOldPhoto
-    ```
+## 前期准备
 
-3. Cобрать контейнер:
+使用该项目，您需要有开通以下服务并拥有对应权限：
 
-    ```bash
-    docker-compose build
-    ```
-    
-## Использование
+<service>
 
-1. Запустите контейнер:
+| 服务/业务 | 权限               |
+| --------- | ------------------ |
+| 函数计算  | AliyunFCFullAccess |
 
-    ```bash
-    docker-compose up 
-    ```
+</service>
 
+<remark>
+
+</remark>
+
+<disclaimers>
+
+</disclaimers>
+
+## 部署 & 体验
+
+<appcenter>
+
+- :fire: 通过 [Serverless 应用中心](https://fcnext.console.aliyun.com/applications/create?template=start-fc3-custom-container-python) ，
+  [![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://fcnext.console.aliyun.com/applications/create?template=start-fc3-custom-container-python) 该应用。
+
+</appcenter>
+<deploy>
+
+- 通过 [Serverless Devs Cli](https://www.serverless-devs.com/serverless-devs/install) 进行部署：
+  - [安装 Serverless Devs Cli 开发者工具](https://www.serverless-devs.com/serverless-devs/install) ，并进行[授权信息配置](https://docs.serverless-devs.com/fc/config) ；
+  - 初始化项目：`s init start-fc3-custom-container-python -d start-fc3-custom-container-python`
+  - 进入项目，并进行项目部署：`cd start-fc3-custom-container-python && s deploy -y`
+
+</deploy>
+
+<devgroup>
+
+## 开发者社区
+
+您如果有关于错误的反馈或者未来的期待，您可以在 [Serverless Devs repo Issues](https://github.com/serverless-devs/serverless-devs/issues) 中进行反馈和交流。如果您想要加入我们的讨论组或者了解 FC 组件的最新动态，您可以通过以下渠道进行：
+
+<p align="center">
+
+| <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407298906_20211028074819117230.png" width="130px" > | <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407044136_20211028074404326599.png" width="130px" > | <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407252200_20211028074732517533.png" width="130px" > |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| <center>微信公众号：`serverless`</center>                                                                                         | <center>微信小助手：`xiaojiangwh`</center>                                                                                        | <center>钉钉交流群：`33947367`</center>                                                                                           |
+
+</p>
+</devgroup>
+
+<testEvent>
+</testEvent>

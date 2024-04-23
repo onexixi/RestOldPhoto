@@ -26,5 +26,3 @@ RUN pip install torch>=1.15
 RUN pip install psutil
 
 CMD ["python", "inference_realesrgan.py", "-n", "realesr-general-x4v3", "-i", "inputs", "-o", "results", "--fp32", "--face_enhance", "-dn", "0", "-s", "4"]
-
-

@@ -5,30 +5,30 @@
 # ------------------------------------
 edition: 3.0.0
 name: hello-world-app
-access: "{{ access }}"
+access: "configure_later"
 
 vars: 
-  region: "{{ region }}"
+  region: "cn-shenzhen"
 
 resources:
   hello_world:
     component: fc3 
     actions:      
       pre-${regex('deploy|local')}: 
-        - component: fc3 build --dockerfile ./Dockerfile  
+        - component: fc3 build --dockerfile ./code/Dockerfile  
     props:
       region: ${vars.region}              
-      functionName: "{{ functionName }}"
-      runtime: "{{ runtime }}"
+      functionName: "gen"
+      runtime: "custom-container"
       description: 'hello world by serverless devs'
       timeout: 30
-      memorySize: 4096
+      memorySize: 8192
       gpuMemorySize: 4096
-      cpu: 1
-      diskSize: 4096
-      code: ./
+      cpu: 0.5
+      diskSize: 512
+      code: ./code
       customContainerConfig:
-        image: "{{ acrImage }}"
+        image: "registry-vpc.cn-hangzhou.aliyuncs.com/onexixi/xx"
       # triggers:
       #   - triggerName: httpTrigger # 触发器名称
       #     triggerType: http # 触发器类型
