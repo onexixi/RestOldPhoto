@@ -15,21 +15,19 @@ resources:
     component: fc3 
     actions:      
       pre-${regex('deploy|local')}: 
-        - component: fc3 build --dockerfile ./Dockerfile  
+        - component: fc3 build --dockerfile ./code/Dockerfile  
     props:
       region: ${vars.region}              
       functionName: "{{ functionName }}"
       runtime: "{{ runtime }}"
       description: 'hello world by serverless devs'
       timeout: 30
-      memorySize: 8192
-      gpuMemorySize: 4096
-      instanceType: g1
-      cpu: 1
-      diskSize: 8192
-      code: ./
+      memorySize: 512
+      cpu: 0.5
+      diskSize: 512
+      code: ./code
       customContainerConfig:
-        image: "registry.cn-hangzhou.aliyuncs.com/onexixi/gfpgan"
+        image: "{{ acrImage }}"
       # triggers:
       #   - triggerName: httpTrigger # 触发器名称
       #     triggerType: http # 触发器类型
