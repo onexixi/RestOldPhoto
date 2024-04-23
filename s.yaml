@@ -28,7 +28,7 @@ resources:
       diskSize: 512
       code: ./code
       customContainerConfig:
-        image: "registry-vpc.cn-hangzhou.aliyuncs.com/onexixi/xx"
+        image: "registry.cn-hangzhou.aliyuncs.com/onexixi/xx"
       # triggers:
       #   - triggerName: httpTrigger # 触发器名称
       #     triggerType: http # 触发器类型
