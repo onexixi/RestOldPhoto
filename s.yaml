@@ -29,7 +29,7 @@ resources:
       diskSize: 8192
       code: ./
       customContainerConfig:
-        image: "{{ acrImage }}"
+        image: "registry.cn-hangzhou.aliyuncs.com/onexixi/gfpgan"
       # triggers:
       #   - triggerName: httpTrigger # 触发器名称
       #     triggerType: http # 触发器类型
